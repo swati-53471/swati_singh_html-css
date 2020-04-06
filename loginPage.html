@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container my-5 mx-5" >
+        <form action="action_page.html" class="needs-validation">
+            <div class="header bg-primary" >
+            <h2>
+                <label class="ml-1">
+                    <img src="logo.png" alt="logo" width="5%" height="5%">
+                </label>
+                <label>Sign In</label>
+                 <button type="close" class="ml-5 bg-primary">X</button>
+            </h2>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="mail@example.com" id="email" required>
+
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="password" id="pwd" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="signin" class="btn btn-primary">Sign In</button>
+            </div>
+            <label for="forgotPwd" class="mr-5">Forgot your password?</label>
+            <label for="SignUp"  class="ml-5" >Register!</label>
+
+        </form>
+        <script>
+            // Disable form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+            </script>
+            
+    </div>
+</body>
+</html>
